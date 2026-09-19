@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Finder</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-header">
+        <h4>Github Finder</h4>
+        <div class="theme-icon">
+          <i class="fa-regular fa-sun"></i>
+        </div>
+      </div>
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="text"
+          class="username-text-field"
+          placeholder="Search Github username"
+          list="search-history"
+        />
+        <datalist id="search-history"></datalist>
+        <!-- can't be class must be id -->
+        <button class="search-button">Search</button>
+      </div>
+      <div class="error-message">Error</div>
+      <div class="user-data-box">
+        <div class="user-image">
+          <img src="interstellar.jpg" alt="user image" />
+        </div>
+        <div class="user-content">
+          <div class="top-header">
+            <h2 class="name">Name</h2>
+            <p class="created-at">2025</p>
+          </div>
+          <h5 class="username">username</h5>
+          <p class="bio">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            mollitia, earum sequi tempore temporibus rem repudiandae explicabo?
+            Odio nihil aspernatur voluptatibus qui. Velit deleniti voluptates
+            quisquam eos facilis id reiciendis?
+          </p>
+          <div class="main-inner-banner">
+            <div class="followers">
+              <p>Followers</p>
+              <p class="followers-count">1</p>
+            </div>
+            <div class="following">
+              <p>Following</p>
+              <p class="following-count">1</p>
+            </div>
+            <div class="repos">
+              <p>Repos</p>
+              <p class="repos-count">1</p>
+            </div>
+          </div>
+
+          <div class="user-contact-info">
+            <div>
+              <i class="fa-solid fa-location-dot"></i
+              ><span class="location">egypt</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-square-rss"></i
+              ><a class="blog" href="#" target="_blank">mohamed</a>
+            </div>
+            <div>
+              <i class="fa-brands fa-github"></i
+              ><a href="#" class="github-link" target="_blank">Github</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-building"></i
+              ><span class="company">company</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-envelope"></i
+              ><span class="email">email</span>
+            </div>
+          </div>
+          <div class="top-language-used">
+            Most used lanaguge: <span class="top-language-used-span">C#</span>
+          </div>
+        </div>
+      </div>
+      <div class="repos-list"></div>
+    </div>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>

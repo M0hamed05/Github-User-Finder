@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --main-dark-color: #161d2d;
+  --blue-dark-color: #222f46;
+  --white-color: #f3f7f7;
+  --main-border-radius: 0.2rem;
+  --main-blue-color: #007bff;
+  --main-light-color: rgb(248, 253, 253);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--main-dark-color);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  max-width: 35rem;
+  margin: 1rem;
+  color: var(--white-color);
+}
+/* when color changed from the body to container it works */
+.container .top-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: inherit;
+}
+.container .top-header .theme-icon {
+  cursor: pointer;
+}
+.container .search-bar {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  margin: 1rem 0;
+  background-color: var(--blue-dark-color);
+  padding: 0.5rem;
+  border-radius: var(--main-border-radius);
+  box-shadow: 0px 0px 10px 0.2px #bdbcbc;
+}
+.container .search-bar .search-button {
+  padding: 0.5rem;
+  font-weight: bold;
+  background-color: var(--main-blue-color);
+  color: var(--white-color);
+  border-radius: var(--main-border-radius);
+  border: none;
+  box-shadow: 0px 0px 1px black;
+  cursor: pointer;
+}
+.container .search-bar .username-text-field {
+  background-color: transparent;
+  border: none;
+  padding: 0.4rem;
+  color: inherit;
+  min-width: 16rem;
+  width: 100%;
+}
+/* what comes after :: called Pseudo-elemnet */
+.container .search-bar .username-text-field::placeholder {
+  color: inherit;
+  opacity: 0.75;
+}
+input::-webkit-calendar-picker-indicator {
+  display: none !important; /*should be there important*/
+} /*to disable the arrow that appears from the datalist*/
+.container .search-bar i {
+  color: var(--main-blue-color);
+  font-size: 20px;
+}
+.user-data-box {
+  background-color: var(--blue-dark-color);
+  color: inherit;
+  border-radius: var(--main-border-radius);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  display: none;
+  box-shadow: 0px 0px 10px 0.2px #bdbcbc;
+}
+.user-data-box .user-content {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+.user-data-box .user-content .created-at {
+  opacity: 0.8;
+  font-size: smaller;
+}
+.user-data-box .user-content .username {
+  color: var(--main-blue-color);
+}
+.user-data-box .user-content .bio {
+  opacity: 0.7;
+  font-size: smaller;
+}
+.user-data-box .user-content .main-inner-banner {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  background-color: var(--main-dark-color);
+  padding: 0.5rem;
+}
+.user-data-box .user-content .main-inner-banner div p:first-child {
+  opacity: 0.7;
+}
+.user-data-box .user-content .main-inner-banner div p:last-child {
+  font-weight: bold;
+}
+.user-data-box .user-content .user-contact-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem;
+  justify-content: space-around;
+}
+.user-data-box .user-content .user-contact-info div i {
+  margin-right: 0.2rem;
+}
+.user-data-box .user-content .user-contact-info div .github-link,
+.user-data-box .user-content .user-contact-info div .blog {
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  word-break: break-all;
+}
+.user-data-box .user-content .top-language-used {
+  margin: 0.2rem auto;
+}
+.user-data-box .user-content .top-language-used .top-language-used-span {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.user-data-box .user-image img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.repos-list {
+  margin: 1rem 0;
+  background-color: var(--blue-dark-color);
+  color: inherit;
+  border-radius: var(--main-border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  box-shadow: 0px 0px 10px 0.2px #bdbcbc;
+}
+.repos-list .repo-row {
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: var(--main-dark-color);
+  border-radius: var(--main-border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 95%; /*because of margin left and right is not working*/
+}
+.repos-list h3 {
+  margin: 0.3rem;
+}
+.repos-list .repo-row .repo-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+.repos-list .repo-row .description {
+  opacity: 0.9;
+  background-color: var(--blue-dark-color);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+
+.error-message {
+  color: red;
+  opacity: 0.6;
+  margin: auto;
+  margin-bottom: 0.8rem;
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+  }
+  .user-data-box {
+    grid-template-columns: 1fr;
+  }
+  .user-data-box .user-image {
+    margin: auto;
+  }
+  .user-data-box .user-content .created-at {
+    display: none;
+  }
+  /* .user-data-box .user-content {
+    align-items: center;
+    justify-content: center;
+  } didn't work */
+  .container .user-content .top-header {
+    justify-content: center;
+  }
+  .user-data-box .user-content .username {
+    margin: auto;
+  }
+  .user-data-box .user-content .bio {
+    margin: auto;
+  }
+  .container .search-bar {
+    grid-template-columns: 1fr;
+  }
+  .fa-solid.fa-magnifying-glass {
+    display: none;
+  }
+  .container .search-bar .username-text-field {
+    border: 1px solid var(--main-blue-color);
+    border-radius: var(--main-border-radius);
+  }
+  .user-data-box .user-content .user-contact-info {
+    grid-template-columns: 1fr;
+  }
+}

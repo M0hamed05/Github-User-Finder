@@ -1,0 +1,12 @@
+=== How to Test Live Server on Mobile ===
+
+1. Connect both your Phone and PC to the SAME Wi-Fi network.
+
+2. Open Command Prompt (cmd) on your PC, type "ipconfig", and press Enter.
+   -> Find your "IPv4 Address" (e.g., 192.168.1.7).
+
+3. Open your PC browser and run Live Server to check the port number (usually 5500).
+
+4. Open your phone browser and type:
+   http://YOUR_IP:5500
+   (Example: http://192.168.1.7:5500)
