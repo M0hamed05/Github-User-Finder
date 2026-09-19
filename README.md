@@ -1,6 +1,6 @@
 <div align="center">
 
-  # 🔍 GitHub User Finder
+  # GitHub User Finder
 
   [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Interactive_App-007bff?style=for-the-badge&logo=github)](https://m0hamed05.github.io/Github-User-Finder/)
 
