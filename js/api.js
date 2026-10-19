@@ -14,7 +14,7 @@ export class Api {
         signal: controller.signal,
       });
 
-      clearTimeout(timeoutId); //in case fetch works in less than 4 seconds
+      clearTimeout(timeoutId); //in case fetch works in less than 8 seconds
 
       if (response.status === 404) {
         Mainlogic.showErrorMessage("User is not found");
